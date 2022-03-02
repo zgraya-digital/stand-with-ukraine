@@ -1,0 +1,72 @@
+$white: #fff;
+$primary-color: blue;
+
+.zg-stand-ukraine{
+  font: 400 14px/1.4 sans-serif;
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	bottom: 0;
+  background: rgba(20, 20, 20, 0.95) no-repeat -160px 0;
+  background-size: auto 100%;
+	line-height: 1.42;
+	font-size: 14px;
+	border-top: 1px solid $white;
+	transition: 0.3s ease-in-out;
+	transition-property: transform, visibility;
+	transition-delay: 0s, 0.4s;
+	padding: 32px;
+  color: $white;
+  @media (max-width: 1024px) {
+    background-position: 0 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 16px;
+	}
+
+	&.close{
+		transform: translateY(120%);
+		visibility: hidden;
+	}
+	p{
+		line-height: inherit;
+	}
+	a{
+		text-decoration: underline;
+    color: inherit;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	&__title{
+		margin:0 0 8px !important;
+    text-transform: uppercase;
+	}
+	&__inner{
+		& > :last-child{
+			margin-bottom: 0;
+		}
+	}
+	
+	&__close{
+    cursor: pointer;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+		position: absolute;
+		right: 12px;
+		top: 12px;
+    color: $white;
+    @media (max-width: 1024px) {
+      right: 48px;
+      top: 40px;
+    }
+
+    @media (hover) {
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}
