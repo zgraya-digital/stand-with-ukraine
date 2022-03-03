@@ -63,10 +63,9 @@ $primary-color: blue;
 	  z-index: 0;
 	  top: 0;
 	  left: -160px;	
-	  height: 100%;
-	  aspect-ratio: 472/180;
+    overflow: visible;
 	  @media (min-width: 1024px) {
-		left: 0;	
+		  left: 0;	
 	  }
   }
   &__close {
