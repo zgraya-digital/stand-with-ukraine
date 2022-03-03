@@ -1,72 +1,93 @@
 $white: #fff;
 $primary-color: blue;
-
-.zg-stand-ukraine{
-  font: 400 14px/1.4 sans-serif;
-	position: fixed;
-	left: 0;
-	right: 0;
-	z-index: 9999;
-	bottom: 0;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+.zg-stand-ukraine {
+  font: 400 14px/1.4 'DM Sans', sans-serif;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  bottom: 0;
   background: rgba(20, 20, 20, 0.95) no-repeat -160px 0;
   background-size: auto 100%;
-	line-height: 1.42;
-	font-size: 14px;
-	border-top: 1px solid $white;
-	transition: 0.3s ease-in-out;
-	transition-property: transform, visibility;
-	transition-delay: 0s, 0.4s;
-	padding: 32px;
+  line-height: 1.42;
+  font-size: 14px;
+  border-top: 1px solid $white;
+  transition: 0.3s ease-in-out;
+  transition-property: transform, visibility;
+  transition-delay: 0s, 0.4s;
+  padding: 32px 16px;
   color: $white;
-  @media (max-width: 1024px) {
-    background-position: 0 0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+  letter-spacing: 0.01em;
+  @media (min-width: 1024px) {
+	 padding: 40px 32px;
     font-size: 16px;
-	}
+  }
 
-	&.close{
-		transform: translateY(120%);
-		visibility: hidden;
-	}
-	p{
-		line-height: inherit;
-	}
-	a{
-		text-decoration: underline;
+  &.close {
+    transform: translateY(120%);
+    visibility: hidden;
+  }
+  p {
+    line-height: inherit;
+	 margin: 0 !important;
+  }
+  a {
+    text-decoration: underline;
     color: inherit;
-		&:hover{
-			text-decoration: none;
-		}
-	}
-	&__title{
-		margin:0 0 8px !important;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__title {
+    margin: 0 0 8px !important;
+	 padding: 0 !important;
+	 border: none !important;
     text-transform: uppercase;
-	}
-	&__inner{
-		& > :last-child{
-			margin-bottom: 0;
-		}
-	}
-	
-	&__close{
+	 font-size: 32px !important;
+	 font-weight: 400 !important;
+	 letter-spacing: initial;
+	 line-height: 1.32 !important;
+  }
+  &__inner {
+	  max-width: 770px;
+	  margin: 0 auto;
+	  position: relative;
+	  z-index: 1;
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__flag{
+	  position: absolute;
+	  z-index: 0;
+	  top: 0;
+	  left: -160px;	
+	  height: 100%;
+	  aspect-ratio: 472/180;
+	  @media (min-width: 1024px) {
+		left: 0;	
+	  }
+  }
+  &__close {
     cursor: pointer;
     padding: 0 !important;
     border: none !important;
     background: none !important;
-		position: absolute;
-		right: 12px;
-		top: 12px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
     color: $white;
-    @media (max-width: 1024px) {
+	 transition: 0.3s color;
+    @media (min-width: 1024px) {
       right: 48px;
       top: 40px;
     }
 
     @media (hover) {
-			&:hover {
-				color: $primary-color;
-			}
-		}
-	}
+      &:hover {
+        color: rgba(#fff, 0.6);
+      }
+    }
+  }
 }

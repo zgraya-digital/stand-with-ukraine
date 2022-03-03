@@ -1,17 +1,46 @@
 <div class="zg-stand-ukraine " data-stand-ukraine>
-  <div class="row">
-    <div class="column small-12 xlarge-7 xlarge-offset-2 zg-stand-ukraine__inner">
-      <h3 class="zg-stand-ukraine__title">
-        ${title}
-      </h3>
-      <p>${text}</p>
-    </div>
-  </div>
-  <!-- /.zg-stand-ukraine__inner -->
-  <button class="zg-stand-ukraine__close" type="button" aria-label="Close" onclick="document.querySelector('[data-stand-ukraine]').classList.add('close')">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <rect x="8.1109" y="6.90387" width="12" height="1" transform="rotate(45 8.1109 6.90387)" fill="currentColor" />
-      <rect x="7.40381" y="15.3891" width="12" height="1" transform="rotate(-45 7.40381 15.3891)" fill="currentColor" />
-    </svg>
-  </button>
+	<div class="zg-stand-ukraine__inner">
+		<h3 class="zg-stand-ukraine__title">
+			${title}
+		</h3>
+		<p>${text}</p>
+	</div>
+	<!-- /.zg-stand-ukraine__inner -->
+	<svg class="zg-stand-ukraine__flag" width="472" height="180" viewBox="0 0 472 180" fill="none">
+		<g clip-path="url(#zg-a)">
+			<g filter="url(#zg-b)">
+				<path d="M360 82.5 33.5 76l197.757 96.5L360 82.5Z" fill="#FFC700" />
+			</g>
+			<g filter="url(#zg-c)">
+				<path
+					d="M20 58.536 51.541 109 171.5 99l110.642 10L327 38.472 198.733 33l-43.457 25.536-52.568-20.064L20 58.536Z"
+					fill="#00B2FF" />
+			</g>
+		</g>
+		<defs>
+			<filter id="zg-b" x="-46.5" y="-4" width="486.5" height="256.5" filterUnits="userSpaceOnUse"
+				color-interpolation-filters="sRGB">
+				<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+				<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_5896_29905" />
+			</filter>
+			<filter id="zg-c" x="-60" y="-47" width="467" height="236" filterUnits="userSpaceOnUse"
+				color-interpolation-filters="sRGB">
+				<feFlood flood-opacity="0" result="BackgroundImageFix" />
+				<feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+				<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_5896_29905" />
+			</filter>
+			<clipPath id="zg-a">
+				<rect width="472" height="180" fill="white" />
+			</clipPath>
+		</defs>
+	</svg>
+	<button class="zg-stand-ukraine__close" type="button" aria-label="Close"
+		onclick="document.querySelector('[data-stand-ukraine]').classList.add('close')">
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+			<rect x="8.1109" y="6.90387" width="12" height="1" transform="rotate(45 8.1109 6.90387)" fill="currentColor" />
+			<rect x="7.40381" y="15.3891" width="12" height="1" transform="rotate(-45 7.40381 15.3891)"
+				fill="currentColor" />
+		</svg>
+	</button>
 </div>
