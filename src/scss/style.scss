@@ -1,9 +1,10 @@
 $white: #fff;
 $primary-color: blue;
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 .zg-stand-ukraine {
-  font: 400 14px/1.4 'DM Sans', sans-serif;
-  position: fixed;
+  font: 400 14px/1.4 'Manrope', sans-serif;
+  position: fixed; 
+  overflow: hidden;
   left: 0;
   right: 0;
   z-index: 9999;
@@ -33,13 +34,29 @@ $primary-color: blue;
 	 margin: 0 !important;
   }
   a {
-    text-decoration: underline;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
+	 position: relative;
+	 display: inline-block;
+	 &:after{
+		 content:'';
+		 position: absolute;
+		 left: 0;
+		 right: 0;
+		 bottom: 0.16em;
+		 height: 1px;
+		 background: currentColor;
+		 transition: transform 0.2s ease-in-out;
+		 transform-origin: 100% 0;
+	 }
     &:hover {
-      text-decoration: none;
+      &:after{
+			transform: scaleX(0);
+		}		
     }
   }
   &__title {
+	  color: inheri !important;
     margin: 0 0 8px !important;
 	 padding: 0 !important;
 	 border: none !important;
@@ -89,4 +106,20 @@ $primary-color: blue;
       }
     }
   }
+}
+
+.zg-light{
+	&.zg-stand-ukraine {
+		background: rgba(255, 255, 255, 0.95);
+		color: #111111;
+		border-color: #E0E0E0;
+	 }
+	 .zg-stand-ukraine__close{
+		color: #BDBDBD;	 
+		@media (hover) {
+		  &:hover {
+			 color: #111111;
+		  }
+		}
+	 }
 }
